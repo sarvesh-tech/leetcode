@@ -8,6 +8,8 @@ class Solution(object):
         
         #create a hasmap key:value is num:index
 
+        #return index pair that add up to the target value
+
         seen = {}
 
         for i in range(len(nums)):
