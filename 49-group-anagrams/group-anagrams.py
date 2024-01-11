@@ -5,10 +5,8 @@ class Solution:
         anagram_map = defaultdict(list)
         
         for word in strs:
-            sorted_word = ''.join(sorted(word))
-            anagram_map[sorted_word].append(word)
-        
-        return list(anagram_map.values())
+            anagram_map[''.join(sorted(word))].append(word)   
+        return anagram_map.values()
 
                 
             
