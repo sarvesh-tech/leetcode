@@ -1,16 +1,12 @@
 from collections import defaultdict
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        
-        anagram_map = defaultdict(list)
-        
-        for word in strs:
-            anagram_map[''.join(sorted(word))].append(word)   
-        return anagram_map.values()
+        dic = defaultdict(list)
 
-                
+        for c in strs:
+            #add the word to the dictionary 
+            dic["".join(sorted(c))].append(c)
             
-
-
-
+        return dic.values()
+        
             
