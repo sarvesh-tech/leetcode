@@ -7,10 +7,10 @@ class Solution:
             if numbers[lp] + numbers[rp] == target:
                 return [lp+1,rp+1]
             
-            if numbers[lp] + numbers[rp] > target:
+            elif numbers[lp] + numbers[rp] > target:
                 rp -= 1
             
-            if numbers[lp] + numbers[rp] < target:
+            else:
                 lp += 1
 
 
