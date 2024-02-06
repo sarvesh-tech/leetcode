@@ -13,6 +13,5 @@ class Solution:
             if numbers[lp] + numbers[rp] < target:
                 lp += 1
 
-        return [lp+1,rp+1]
 
         
