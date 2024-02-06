@@ -4,10 +4,11 @@ class Solution:
         rp = len(numbers)-1 
 
         while rp > lp:
-            if numbers[lp] + numbers[rp] == target:
+            total = numbers[lp] + numbers[rp]
+            if total == target:
                 return [lp+1,rp+1]
             
-            elif numbers[lp] + numbers[rp] > target:
+            elif total > target:
                 rp -= 1
             
             else:
