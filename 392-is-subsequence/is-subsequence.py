@@ -1,18 +1,15 @@
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
-        res = ""    
-        L = 0
-        R = 0
+        # have two pointers at each s and t
+        # if match found while iterating t, increment s & t ptrs
+        # if not found increment t, 
 
-        #s = "axc", t = "ahbgdc"
-        #      ^
-        #                      ^
 
-        while len(res) != len(s) and R < len(t):
-            if s[L] == t[R]:
-                res += t[R]
-                L += 1
-            R += 1
-        
-        return (s == res)
+        n,m = len(s),len(t)
+        i = j = 0
 
+        while i < n and j < m:
+            if s[i] == t[j]:
+                i += 1
+            j += 1
+        return i == n
