@@ -6,5 +6,5 @@ class Solution:
         for n, value in enumerate(nums):
             complement = target - value
             if value in complements:
-                return [complements[value],n]
+                return [complements[value], n]
             complements[complement] = n
