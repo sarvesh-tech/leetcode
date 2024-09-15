@@ -3,7 +3,7 @@ class Solution:
         low = float('inf') 
         maxPrice = 0
 
-        for i in range(0, len(prices)):
+        for i in range(len(prices)):
             if (prices[i] < low):
                 low = prices[i]
             elif (prices[i] - low > maxPrice):
