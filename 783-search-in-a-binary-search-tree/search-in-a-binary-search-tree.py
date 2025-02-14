@@ -14,8 +14,8 @@ class Solution:
             node = q.popleft()
             if(node.val == val):
                 return node
-            if(node.left):
+            if val < node.val and node.left:
                 q.append(node.left)
-            if(node.right):
+            elif val > node.val and node.right:
                 q.append(node.right)
         return None
