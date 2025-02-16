@@ -9,13 +9,9 @@ class Solution:
     def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
         if not root:
             return None
-        q = deque([root])
-        while(len(q) > 0):
-            node = q.popleft()
-            if(node.val == val):
-                return node
-            if val < node.val and node.left:
-                q.append(node.left)
-            elif val > node.val and node.right:
-                q.append(node.right)
-        return None
+        if (root.val == val):
+            return root
+        elif root.val > val:
+            return self.searchBST(root.left, val)
+        else:
+            return self.searchBST(root.right, val)
